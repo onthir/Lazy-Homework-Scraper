@@ -8,11 +8,10 @@ This will only work for any college students whose college follow the moodle web
 1. Download All Files.
 2. Open credentials.txt and write down your moodle username, password and gmail email, password like shown in the example below:
 
-
-testusername
-testpassword
-test@gmail.com
-testgmailpassword
+testusername<br>
+testpassword<br>
+test@gmail.com<br>
+testgmailpassword<br>
 
 3. Save it. Now Run main.py
 4. After the script is run successfully, access your google keep from your phone or laptop to check the homeworks.

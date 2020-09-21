@@ -1,0 +1,4 @@
+python3.0
+gkeepapi
+bs4
+lxml
