@@ -38,9 +38,8 @@ for course in courses[0]:
     idx += 1
 print("\n---------------------------------")
 
-ask = input("Enter Course Number (1/2/3... or 1,2,3 for multiple courses): ")
 
-if len(str(ask)) == 1:
+for ask in range(1, 7):
     # course link
     ask = int(ask)
     courseLink = courses[1][ask-1]
@@ -59,25 +58,7 @@ if len(str(ask)) == 1:
     from googlekeep import *
 
     createNote(courseName, idealList, gmailEmail, gmailPassword)
-else:
-    nums = ask.split(",")
-    for num in nums:
-        ask = int(num)
-        courseLink = courses[1][ask-1]
-        courseName = courses[0][ask-1]
-        print("\nChecking Homework for " + str(courses[0][ask-1]))
-        print("\n---------------------------------\n")
+    del(idealList[:])
 
-        homeworks = crawler.list_all_homeworks(courseLink)
-        # print(homeworks)
-
-        for homework in homeworks:
-            homework = text_breaker(homework)
-            idealList.append((homework, False))
-
-        from googlekeep import *
-
-        createNote(courseName, idealList, gmailEmail, gmailPassword)
-        del(idealList[:])
 
 print("Note Generated Successfully")
